@@ -17,6 +17,8 @@ public class WalkForward : StateMachineBehaviour
         if (animator.GetFloat("Distance") <= 2f)
         {
             animator.SetBool("WalkForward", false);
+            ai.Idle();
+            ai.Attack();
         }
         else
         {
@@ -27,8 +29,6 @@ public class WalkForward : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ai.Idle();
-        ai.Attack();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

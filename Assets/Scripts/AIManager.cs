@@ -11,6 +11,7 @@ public class AIManager : MonoBehaviour
     public Rigidbody playerRig;
     public float distance;
     public float pushPower;
+    public GameObject weapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,13 +50,13 @@ public class AIManager : MonoBehaviour
     public void Attack()
     {
         Idle();
-        if (distance <= 1.3f)
+        if (distance <= 1.9f)
         {
             anim.SetInteger("AttackRandom", 1);
         }
         else
         {
-            anim.SetInteger("AttackRandom", Random.Range(2,4));
+            anim.SetInteger("AttackRandom", Random.Range(2,5));
         }
     }
 
@@ -76,5 +77,14 @@ public class AIManager : MonoBehaviour
         Debug.Log("Push Setting Value");
         Vector3 pushDirection = (player.position - transform.position).normalized;
         playerRig.AddForce(transform.forward * value, ForceMode.Impulse);
+    }
+
+    public void WeaponTriggerOn()
+    {
+        weapon.SetActive(true);
+    }
+    public void WeaponTriggerOff()
+    {
+        weapon.SetActive(false);
     }
 }

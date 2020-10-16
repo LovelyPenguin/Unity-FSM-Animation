@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AIWeapon : MonoBehaviour
 {
+    public UnityEvent playerTriggerEnter;
     public AIManager ai;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class AIWeapon : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ai.PushSettingValue(6);
+            playerTriggerEnter.Invoke();
         }
     }
 }

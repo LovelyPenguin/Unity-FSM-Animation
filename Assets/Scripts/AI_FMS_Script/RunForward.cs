@@ -14,22 +14,13 @@ public class RunForward : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.GetFloat("Distance") > 10f)
-        {
-            ai.RunToTarget();
-            animator.SetBool("RunForward", true);
-        }
-        else if (animator.GetFloat("Distance") <= 10f)
-        {
-            ai.WalkToTarget();
-            animator.SetBool("WalkForward", true);
-        }
+        ai.RunToTarget();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("RunForward", false);
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

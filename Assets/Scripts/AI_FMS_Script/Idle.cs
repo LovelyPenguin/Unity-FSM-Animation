@@ -9,25 +9,19 @@ public class Idle : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         ai = animator.GetComponent<AIManager>();
+        ai.Idle();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.GetFloat("Distance") > 10f)
-        {
-            animator.SetBool("RunForward", true);
-        }
-        else if (animator.GetFloat("Distance") <= 10f)
-        {
-            animator.SetBool("WalkForward", true);
-        }
+        ai.Idle();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ai.Idle();
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
