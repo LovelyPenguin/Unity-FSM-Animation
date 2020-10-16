@@ -120192,6 +120192,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
+  - time: 0.6666667
+    functionName: SetDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 3
+    intParameter: 0
+    messageOptions: 0
   - time: 1.3333334
     functionName: WeaponTriggerOff
     data: 
@@ -120206,6 +120213,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 5
     messageOptions: 0
+  - time: 1.5666667
+    functionName: SetDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 3.5
+    intParameter: 0
+    messageOptions: 0
   - time: 2
     functionName: WeaponTriggerOff
     data: 
@@ -120219,6 +120233,13 @@ AnimationClip:
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 7
+    messageOptions: 0
+  - time: 2.5
+    functionName: SetDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 6
+    intParameter: 0
     messageOptions: 0
   - time: 3
     functionName: WeaponTriggerOff

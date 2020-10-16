@@ -24,6 +24,7 @@ public class AIWeapon : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerTriggerEnter.Invoke();
+            Debug.Log("Damage : " + ai.damageFactor);
         }
     }
 }

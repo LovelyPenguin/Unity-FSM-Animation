@@ -16,7 +16,6 @@ public class WalkForward : StateMachineBehaviour
     {
         if (animator.GetFloat("Distance") <= 2f)
         {
-            animator.SetBool("WalkForward", false);
             ai.Idle();
             ai.Attack();
         }

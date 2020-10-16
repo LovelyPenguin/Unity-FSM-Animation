@@ -12,6 +12,8 @@ public class AIManager : MonoBehaviour
     public float distance;
     public float pushPower;
     public GameObject weapon;
+    [HideInInspector]
+    public float damageFactor;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,5 +88,15 @@ public class AIManager : MonoBehaviour
     public void WeaponTriggerOff()
     {
         weapon.SetActive(false);
+    }
+
+    public void LookAtUpdate()
+    {
+        //transform.LookAt(player.position, transform.forward);
+    }
+
+    public void SetDamage(float value)
+    {
+        damageFactor = value;
     }
 }
