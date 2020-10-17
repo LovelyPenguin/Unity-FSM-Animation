@@ -58190,7 +58190,7 @@ AnimationClip:
     functionName: SetKnockBack
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 8
+    floatParameter: 20
     intParameter: 0
     messageOptions: 0
   - time: 0.73333335

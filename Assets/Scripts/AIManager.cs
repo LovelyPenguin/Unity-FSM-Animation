@@ -96,6 +96,5 @@ public class AIManager : MonoBehaviour
     public void SetKnockBack(float value)
     {
         knockBackFactor = value;
-        Push();
     }
 }
