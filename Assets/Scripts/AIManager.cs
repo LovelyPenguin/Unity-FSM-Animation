@@ -15,6 +15,9 @@ public class AIManager : MonoBehaviour
     public float damageFactor;
     [HideInInspector]
     public float knockBackFactor;
+
+    private float extraRotationSpeed = 5f;
+    private bool isAttack = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,8 @@ public class AIManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerRig = player.GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+
+        //nav.updateRotation = false;
     }
 
     // Update is called once per frame
@@ -29,6 +34,12 @@ public class AIManager : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, player.position);
         anim.SetFloat("Distance", distance);
+        //ImmediatelyRotation();
+
+        if (!isAttack)
+        {
+            TempSolution();
+        }
     }
 
     public void RunToTarget()
@@ -48,11 +59,13 @@ public class AIManager : MonoBehaviour
     public void Idle()
     {
         nav.isStopped = true;
+        isAttack = false;
     }
 
     public void Attack()
     {
-        Idle();
+        nav.isStopped = true;
+        isAttack = true;
         if (distance <= 1.9f)
         {
             anim.SetInteger("AttackRandom", 1);
@@ -96,5 +109,21 @@ public class AIManager : MonoBehaviour
     public void SetKnockBack(float value)
     {
         knockBackFactor = value;
+    }
+
+    public void ImmediatelyRotation()
+    {
+        Debug.Log("ROTATION");
+        Vector3 playerPosition = new Vector3(
+            player.position.x, 
+            0, 
+            player.position.z);
+        transform.LookAt(playerPosition);
+    }
+
+    public void TempSolution()
+    {
+        Vector3 lookrotation = nav.steeringTarget - transform.position;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookrotation), extraRotationSpeed * Time.deltaTime);
     }
 }

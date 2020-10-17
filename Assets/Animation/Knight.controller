@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0a3b8d0ec81094999887f7f2f3022c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ai: {fileID: 0}
 --- !u!1102 &-6419901684835725886
 AnimatorState:
   serializedVersion: 5
@@ -451,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0a3b8d0ec81094999887f7f2f3022c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ai: {fileID: 0}
 --- !u!114 &-2144567212705861437
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,6 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0a3b8d0ec81094999887f7f2f3022c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ai: {fileID: 0}
 --- !u!1109 &-788042650354913372
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -541,13 +544,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: AttackRandom
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -657,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0a3b8d0ec81094999887f7f2f3022c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ai: {fileID: 0}
 --- !u!1102 &3287978231798723747
 AnimatorState:
   serializedVersion: 5
