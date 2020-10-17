@@ -120190,13 +120190,20 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 3
+    intParameter: 0
     messageOptions: 0
   - time: 0.6666667
     functionName: SetDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 3
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: SetKnockBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 2
     intParameter: 0
     messageOptions: 0
   - time: 1.3333334
@@ -120211,13 +120218,20 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 5
+    intParameter: 0
     messageOptions: 0
   - time: 1.5666667
     functionName: SetDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 3.5
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.5666667
+    functionName: SetKnockBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 3
     intParameter: 0
     messageOptions: 0
   - time: 2
@@ -120232,10 +120246,17 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 7
+    intParameter: 0
     messageOptions: 0
   - time: 2.5
     functionName: SetDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 6
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5
+    functionName: SetKnockBack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 6

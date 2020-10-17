@@ -5,8 +5,12 @@ using UnityEngine.Events;
 
 public class AIWeapon : MonoBehaviour
 {
+    [Header("Necessary Setting")]
     public UnityEvent playerTriggerEnter;
     public AIManager ai;
+    [Header("Basic Setting")]
+    public bool useAttack;
+    public bool useTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,6 @@ public class AIWeapon : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerTriggerEnter.Invoke();
-            Debug.Log("Damage : " + ai.damageFactor);
         }
     }
 }

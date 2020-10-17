@@ -58180,10 +58180,23 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: Push
+    functionName: WeaponTriggerOn
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: b2a2716c99aceda41b8b1102e63428cb,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: SetKnockBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 8
     intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: WeaponTriggerOff
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
     messageOptions: 0

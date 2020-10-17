@@ -9,6 +9,7 @@ public class Attack : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         ai = animator.GetComponent<AIManager>();
+        ai.Idle();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

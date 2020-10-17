@@ -10,10 +10,11 @@ public class AIManager : MonoBehaviour
     public Transform player;
     public Rigidbody playerRig;
     public float distance;
-    public float pushPower;
-    public GameObject weapon;
+    public List<GameObject> weapon;
     [HideInInspector]
     public float damageFactor;
+    [HideInInspector]
+    public float knockBackFactor;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,23 +72,16 @@ public class AIManager : MonoBehaviour
     {
         Debug.Log("Push");
         Vector3 pushDirection = (player.position - transform.position).normalized;
-        playerRig.AddForce(transform.forward * pushPower, ForceMode.Impulse);
+        playerRig.AddForce(transform.forward * knockBackFactor, ForceMode.Impulse);
     }
 
-    public void PushSettingValue(int value)
+    public void WeaponTriggerOn(int index)
     {
-        Debug.Log("Push Setting Value");
-        Vector3 pushDirection = (player.position - transform.position).normalized;
-        playerRig.AddForce(transform.forward * value, ForceMode.Impulse);
+        weapon[index].SetActive(true);
     }
-
-    public void WeaponTriggerOn()
+    public void WeaponTriggerOff(int index)
     {
-        weapon.SetActive(true);
-    }
-    public void WeaponTriggerOff()
-    {
-        weapon.SetActive(false);
+        weapon[index].SetActive(false);
     }
 
     public void LookAtUpdate()
@@ -98,5 +92,10 @@ public class AIManager : MonoBehaviour
     public void SetDamage(float value)
     {
         damageFactor = value;
+    }
+    public void SetKnockBack(float value)
+    {
+        knockBackFactor = value;
+        Push();
     }
 }

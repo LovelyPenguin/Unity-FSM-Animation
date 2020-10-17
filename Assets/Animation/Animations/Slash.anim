@@ -47609,6 +47609,13 @@ AnimationClip:
     floatParameter: 4
     intParameter: 0
     messageOptions: 0
+  - time: 0.5
+    functionName: SetKnockBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 3
+    intParameter: 0
+    messageOptions: 0
   - time: 0.8333333
     functionName: WeaponTriggerOff
     data: 
